@@ -1,6 +1,6 @@
 CREATE TABLE `user_address` (
-  `aid` int(11) NOT NULL,
-  `uid` int(11) DEFAULT NULL,
+  `address_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `address_type` varchar(45) NOT NULL,
   `address1` varchar(45) NOT NULL,
   `address2` varchar(45) DEFAULT NULL,
@@ -8,5 +8,6 @@ CREATE TABLE `user_address` (
   `state` varchar(45) NOT NULL,
   `country` varchar(45) NOT NULL,
   `zip` varchar(45) NOT NULL,
-  PRIMARY KEY (`aid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`address_id`),
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+);

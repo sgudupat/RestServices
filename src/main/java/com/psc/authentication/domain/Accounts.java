@@ -3,20 +3,14 @@ package com.psc.authentication.domain;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Accounts {
-	@JsonProperty(value = "id")
-	private int user_id;
+	
 	@JsonProperty(value = "username")
 	private String username;
 	@JsonProperty(value = "password")
 	private String password;
 	@JsonProperty(value = "config")
 	private String config;
-	public int getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
-	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -37,7 +31,7 @@ public class Accounts {
 	}
 	@Override
 	public String toString() {
-		return "Authentication [user_id=" + user_id + ", username=" + username
+		return "Authentication [ username=" + username
 				+ ", password=" + password + ", config=" + config + "]";
 	}
 	

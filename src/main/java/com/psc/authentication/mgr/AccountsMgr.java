@@ -11,8 +11,8 @@ public class AccountsMgr {
 	@Autowired
 	AccountsDao accountsDao;
 
-	public void getAccounts(Accounts accounts) {
-		accountsDao.getAccounts(accounts);
+	public Accounts getAccounts(Accounts accounts) {
+		return accountsDao.getAccounts(accounts);
 	}
 
 }

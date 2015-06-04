@@ -57,11 +57,19 @@ public class RegistrationController {
 	String auser=(String) json1.get("auser");
 	String apwd=(String) json1.get("pwd");
 	String config=(String) json1.get("config");	
+	System.out.println("auser"+auser+"password"+apwd+"config"+config);
 	Accounts acnt=new Accounts();
 	acnt.setUsername(auser);
 	acnt.setPassword(apwd);
 	acnt.setConfig(config);
-	acountService.authenticationAccounts(acnt);
+	System.out.println("cotroller acnt"+acnt);
+	Accounts acnts=acountService.authenticationAccounts(acnt);
+	System.out.println("authentication username"+acnts.getUsername());
+	
+	
+	if(acnts.getUsername().equals(auser)){
+		
+	
 	
 		//validate user request object
 		
@@ -91,5 +99,13 @@ public class RegistrationController {
 	}
 		
 	}
+	else{
+		
+		return new UserResponse(3,"Authentication denied");
+		
+	}
 	
+	
+	
+	}
 }  

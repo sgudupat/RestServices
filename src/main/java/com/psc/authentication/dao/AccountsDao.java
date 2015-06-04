@@ -4,6 +4,7 @@ import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -26,9 +27,12 @@ public class AccountsDao extends ConnectionDao  {
 		 String SQL = "SELECT * FROM authentication_accounts where username = :username";  
 		 SqlParameterSource namedParameters = new MapSqlParameterSource("username", accounts.getUsername());  
 		 System.out.println("SQL"+SQL+"USERNAME"+accounts.getUsername());
+		 try{
 		 Accounts acnt = (Accounts) namedParameterJdbcTemplate.queryForObject(SQL, namedParameters, new AccountsRowMapper()); 
 		 return acnt;  
-		
+		 } catch (EmptyResultDataAccessException e) {
+				return null;
+			}		
 
 		
 

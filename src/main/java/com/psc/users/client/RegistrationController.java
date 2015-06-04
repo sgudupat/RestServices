@@ -9,6 +9,7 @@ import java.io.IOException;
 
 
 
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -30,6 +31,7 @@ import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
 import com.psc.users.service.UserService;
 import com.psc.users.util.UserUtil;
+import com.psc.validator.Validator;
 
 @Controller  
 @RequestMapping("/users")   
@@ -57,15 +59,17 @@ public class RegistrationController {
 	String auser=(String) json1.get("auser");
 	String apwd=(String) json1.get("pwd");
 	String config=(String) json1.get("config");	
-	System.out.println("auser"+auser+"password"+apwd+"config"+config);
+	//System.out.println("auser"+auser+"password"+apwd+"config"+config);
 	Accounts acnt=new Accounts();
 	acnt.setUsername(auser);
 	acnt.setPassword(apwd);
 	acnt.setConfig(config);
-	System.out.println("cotroller acnt"+acnt);
+	//System.out.println("cotroller acnt"+acnt);
 	Accounts acnts=acountService.authenticationAccounts(acnt);
-	System.out.println("authentication username"+acnts.getUsername());
-	
+	//System.out.println("authentication username"+acnts.getUsername());
+	if(acountService.authenticationAccounts(acnt)== null){
+		return new UserResponse(3,"Authentication denied");
+	}
 	
 	if(acnts.getUsername().equals(auser)){
 		
@@ -73,7 +77,7 @@ public class RegistrationController {
 	
 		//validate user request object
 		
-	/*	if(StringUtils.isNotBlank(userRequest.getUsername())&& StringUtils.isNotBlank(userRequest.getPassword())&& StringUtils.isNotBlank(userRequest.getEmail())&& StringUtils.isNotBlank(userRequest.getMobile())&& StringUtils.isNotBlank(userRequest.getFirstname())&& StringUtils.isNotBlank(userRequest.getLastname()) && StringUtils.isNotBlank(userRequest.getGender())){
+		/*if(StringUtils.isNotBlank(userRequest.getUsername())&& StringUtils.isNotBlank(userRequest.getPassword())&& StringUtils.isNotBlank(userRequest.getEmail())&& StringUtils.isNotBlank(userRequest.getMobile())&& StringUtils.isNotBlank(userRequest.getFirstname())&& StringUtils.isNotBlank(userRequest.getLastname()) && StringUtils.isNotBlank(userRequest.getGender())){
 			
 			return new UserResponse(3,"all fields are mandatory");
 		}*/
@@ -83,8 +87,46 @@ public class RegistrationController {
 				
 			}else{
 			
+				//passwordvalidation
+		        boolean pass=Validator.validatePassword(userRequest.getPassword());
+		        if(pass == false){
+		        	//System.out.println("password valid");		        	
+		        	return new UserResponse(3,"Invalid password");
+		        }
+		        
+		        boolean mob=Validator.validatemobile(userRequest.getMobile());
+		        if(mob == false){
+		        	//System.out.println("password valid");		        	
+		        	return new UserResponse(3,"Mobile number missing or empty");
+		        }
+		        
+		        boolean email=Validator.validateemail(userRequest.getEmail());
+		        if(email == false){
+		        	//System.out.println("password valid");		        	
+		        	return new UserResponse(3,"email is  missing or empty");
+		        }
+		        boolean pwd=Validator.validatepasswrd(userRequest.getPassword());
+		        if(pwd == false){
+		        	//System.out.println("password valid");		        	
+		        	return new UserResponse(3,"passwordd is  missing or empty");
+		        }
+		        boolean fname=Validator.validateFirstName(userRequest.getFirstname());
+		        		   if(fname == false){
+		   		        	//System.out.println("password valid");		        	
+		   		        	return new UserResponse(3,"fname is   missing or empty");
+		   		        }
+		       boolean lname=Validator.validateLastName(userRequest.getLastname()) ;	
+		       if(lname == false){
+  		        	//System.out.println("password valid");		        	
+  		        	return new UserResponse(3,"lastname is  missing or empty");
+  		        }
+		       boolean gender=Validator.validategender(userRequest.getLastname());
+		       if(gender == false){
+ 		        	//System.out.println("password valid");		        	
+ 		        	return new UserResponse(3,"gender is missing or empty");
+ 		        }
 		
-	System.out.println(userRequest.toString());
+	//System.out.println(userRequest.toString());
 	//System.out.println("request json mapping "+userRequest.getFirstname());
 	logger.debug("user request"+userRequest.toString());
 		

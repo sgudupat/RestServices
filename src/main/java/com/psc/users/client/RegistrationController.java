@@ -1,6 +1,20 @@
 package com.psc.users.client;
 
+import java.io.IOException;
+
+
+
+
+
+
+
+
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -10,6 +24,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.psc.authentication.domain.Accounts;
+import com.psc.authentication.service.AccountsService;
 import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
 import com.psc.users.service.UserService;
@@ -21,21 +37,59 @@ public class RegistrationController {
 
 	@Autowired
 	UserService userservice;
+	@Autowired
+	AccountsService acountService;
 
 	static final Logger logger = Logger.getLogger(RegistrationController.class);  
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)  
 	public @ResponseBody  
-	UserResponse adduser(@RequestBody UserRequest userRequest, @RequestParam("header") String json) {  
+	UserResponse adduser(@RequestBody UserRequest userRequest,@RequestParam("header") String json) {  
 		//todo: authenticate user
+		JSONObject json1 = null;
+		logger.debug("user"+json);
+	try {
+		json1 = (JSONObject)new JSONParser().parse(json);
+	} catch (ParseException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	String auser=(String) json1.get("auser");
+	String apwd=(String) json1.get("pwd");
+	String config=(String) json1.get("config");	
+	Accounts acnt=new Accounts();
+	acnt.setUsername(auser);
+	acnt.setPassword(apwd);
+	acnt.setConfig(config);
+	acountService.authenticationAccounts(acnt);
+	
 		//validate user request object
+		
+	/*	if(StringUtils.isNotBlank(userRequest.getUsername())&& StringUtils.isNotBlank(userRequest.getPassword())&& StringUtils.isNotBlank(userRequest.getEmail())&& StringUtils.isNotBlank(userRequest.getMobile())&& StringUtils.isNotBlank(userRequest.getFirstname())&& StringUtils.isNotBlank(userRequest.getLastname()) && StringUtils.isNotBlank(userRequest.getGender())){
+			
+			return new UserResponse(3,"all fields are mandatory");
+		}*/
+			
+			if(StringUtils.isBlank(userRequest.getUsername()) || StringUtils.isBlank(userRequest.getPassword())){
+				return new UserResponse(3,"username or password cannot be null");
+				
+			}else{
+			
+		
+	System.out.println(userRequest.toString());
+	//System.out.println("request json mapping "+userRequest.getFirstname());
+	logger.debug("user request"+userRequest.toString());
+		
 		//Build user and userInfo objects
 		User user = UserUtil.buildUserFromUserRequest(userRequest);
 		UserInfo userInfo = UserUtil.buildUserInfoFromUserRequest(userRequest);
+		System.out.println(" user "+user);
 		//Register the User
 		userservice.registerUser(user, userInfo);
-		return new UserResponse(5,"authentication denied");
+		return new UserResponse(5,"user added");
+			
 	}
-
-
+		
+	}
+	
 }  

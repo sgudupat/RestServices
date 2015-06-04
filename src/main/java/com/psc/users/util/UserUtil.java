@@ -6,13 +6,25 @@ import com.psc.users.domain.UserInfo;
 
 public class UserUtil {
 	
+	
 	public static User buildUserFromUserRequest(UserRequest request) {
-		return null;
+		User user= new User();
+		user.setUsername(request.getUsername());
+		user.setPassword(request.getPassword());
+		user.setEmail(request.getEmail());
+		user. setMobile(request.getMobile());
+		return user;
+		
 		
 	}
 
 	public static UserInfo buildUserInfoFromUserRequest(UserRequest request) {
-		return null;
+		UserInfo userInfo=new UserInfo();
+		userInfo.setAge(request.getAge());
+		userInfo.setFirstname(request.getFirstname());
+		userInfo.setLastname(request.getLastname());
+		userInfo.setGender(request.getGender());
+		return userInfo;
 		
 	}
 }

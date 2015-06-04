@@ -1,19 +1,29 @@
 package com.psc.users.client;
 
-public class UserRequest {
+import org.codehaus.jackson.annotate.JsonProperty;
 
+public class UserRequest {
+	 @JsonProperty(value = "username") 
 	private String username;
+	 @JsonProperty(value = "password")
 	private String password;
+	 @JsonProperty(value = "email")
 	private String email;
+	 @JsonProperty(value = "mobile")
 	private String mobile;
+	 @JsonProperty(value = "firstname")
 	private String firstname;
+	 @JsonProperty(value = "lastname")
     private String lastname;
+	 @JsonProperty(value = "age")
     private int age;
+	 @JsonProperty(value = "gender")
     private String gender;
 
     public String getUsername() {
 		return username;
 	}
+   
 	public void setUsername(String username) {
 		this.username = username;
 	}

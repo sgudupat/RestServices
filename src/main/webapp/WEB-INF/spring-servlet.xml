@@ -13,7 +13,6 @@
  <!-- declaring base package -->  
 
   <context:component-scan base-package="com.psc" />   
- <context:annotation-config />
  <mvc:annotation-driven />  
   
 
@@ -21,8 +20,11 @@
 
  <bean id="Userinfodao" class="com.psc.users.dao.UserInfoDao" />  
  <bean id="Userinfo" class="com.psc.users.domain.UserInfo" /> 
- <bean id="Userinfoservice" class="com.psc.users.service.UserInfoService" /> 
  <bean id="Userinfomgr" class="com.psc.users.mgr.UserInfoMgr" /> 
+ <bean id="Auserdao" class="com.psc.authentication.dao.AccountsDao" />  
+ <bean id="Auser" class="com.psc.authentication.domain.Accounts" /> 
+ <bean id="Ausermgr" class="com.psc.authentication.mgr.AccountsMgr" /> 
+ <bean id="Auserservice" class="com.psc.authentication.service.AccountsService" />
  <bean id="User" class="com.psc.users.domain.User" /> 
  <bean id="Userdao" class="com.psc.users.dao.UserDao" /> 
  <bean id="Userservice" class="com.psc.users.service.UserService" /> 

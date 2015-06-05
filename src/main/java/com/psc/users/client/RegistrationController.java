@@ -10,6 +10,7 @@ import java.io.IOException;
 
 
 
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.psc.authentication.domain.Accounts;
 import com.psc.authentication.service.AccountsService;
+import com.psc.exceptions.CustomException;
 import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
 import com.psc.users.service.UserService;
@@ -46,7 +48,7 @@ public class RegistrationController {
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)  
 	public @ResponseBody  
-	UserResponse adduser(@RequestBody UserRequest userRequest,@RequestParam("header") String json) {  
+	UserResponse adduser(@RequestBody UserRequest userRequest,@RequestParam("header") String json) throws CustomException {  
 		//todo: authenticate user
 		JSONObject json1 = null;
 		logger.debug("user"+json);
@@ -71,7 +73,7 @@ public class RegistrationController {
 		return new UserResponse(3,"Authentication denied");
 	}
 	
-	if(acnts.getUsername().equals(auser)){
+	if(acnts.getUsername().equals(auser) && acnts.getPassword().equals(apwd)){
 		
 	
 	
@@ -125,6 +127,12 @@ public class RegistrationController {
  		        	//System.out.println("password valid");		        	
  		        	return new UserResponse(3,"gender is missing or empty");
  		        }
+		     System.out.println("user age"+userRequest.getAge());
+		       boolean age=Validator.validateage(userRequest.getAge());
+		       if(age == true){
+		        			        	
+		        	return new UserResponse(3,"age cannot be null value");
+		        }
 		
 	//System.out.println(userRequest.toString());
 	//System.out.println("request json mapping "+userRequest.getFirstname());

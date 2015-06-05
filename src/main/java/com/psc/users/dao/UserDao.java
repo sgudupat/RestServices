@@ -7,8 +7,10 @@ import javax.sql.DataSource;
 import org.apache.log4j.Logger;
 import org.jasypt.util.password.BasicPasswordEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import com.psc.exceptions.CustomException;
 import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
 
@@ -19,7 +21,8 @@ public class UserDao extends ConnectionDao {
 	
 	UserInfo userInfo=new UserInfo();
 
-	public void  insertUser(User user) {
+	@SuppressWarnings("unchecked")
+	public void  insertUser(User user) throws CustomException {
 	/*	String sql = "INSERT INTO users "  
 				+ "(username,password, email, mobile) VALUES (?, ?, ?,?)";  
 		
@@ -45,8 +48,14 @@ public class UserDao extends ConnectionDao {
 	      namedParameters.put("password", encryptedPassword);  
 	      namedParameters.put("email", user.getEmail());  
 	      namedParameters.put("mobile", user.getMobile());  
-	 
+	 try{
 		namedParameterJdbcTemplate.update(sql, namedParameters);
+	 }catch(DuplicateKeyException d){
+		 
+		throw new CustomException("user already exists");
+
+		 
+	 }
 		
 		
 		

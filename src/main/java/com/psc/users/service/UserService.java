@@ -2,6 +2,7 @@ package com.psc.users.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.psc.exceptions.CustomException;
 import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
 import com.psc.users.mgr.UserInfoMgr;
@@ -15,7 +16,7 @@ public class UserService {
 	@Autowired
 	UserInfoMgr userInfoMgr;
 
-	public void registerUser(User user, UserInfo userInfo){
+	public void registerUser(User user, UserInfo userInfo) throws CustomException{
 		//validations
 		//insert
 		usermgr.insertUser(user);

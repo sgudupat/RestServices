@@ -62,5 +62,14 @@ public class Validator {
 	    	return false;
 	    	
 	    }
+	    public static boolean validateage(int age){
+	    	
+	    	System.out.println("validator age"+age);
+	    if(age==0){
+	    	return true;
+	    }
+	    	return false;
+	    }
+
 	    
 }

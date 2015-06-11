@@ -1,9 +1,9 @@
 package com.psc.users.client;
-
+import javax.validation.constraints.NotNull;
 import org.codehaus.jackson.annotate.JsonProperty;
-
 public class UserRequest {
 	 @JsonProperty(value = "username") 
+	 @NotNull(message="username cannot be empty.")
 	private String username;
 	 @JsonProperty(value = "password")
 	private String password;
@@ -19,11 +19,25 @@ public class UserRequest {
     private int age;
 	 @JsonProperty(value = "gender")
     private String gender;
-
-    public String getUsername() {
-		return username;
+	 @JsonProperty(value = "ausername")
+	 private String ausername;
+	 @JsonProperty(value = "apassword")
+	 private String apassword;
+    public String getAusername() {
+		return ausername;
 	}
-   
+	public void setAusername(String ausername) {
+		this.ausername = ausername;
+	}
+	public String getApassword() {
+		return apassword;
+	}
+	public void setApassword(String apassword) {
+		this.apassword = apassword;
+	}
+	public String getUsername() {
+		return username;
+	}   
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -74,7 +88,6 @@ public class UserRequest {
 		return "UserRequest [username=" + username + ", password=" + password
 				+ ", email=" + email + ", mobile=" + mobile + ", firstname="
 				+ firstname + ", lastname=" + lastname + ", age=" + age
-				+ ", gender=" + gender + "]";
-	}	
-
-}
+				+ ", gender=" + gender + ",ausername=" + ausername + ", apassword=" + apassword + "]";
+	}
+	}

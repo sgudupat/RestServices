@@ -1,67 +1,47 @@
 package com.psc.users.dao;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.apache.log4j.Logger;
 import org.jasypt.util.password.BasicPasswordEncryptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.jdbc.core.JdbcTemplate;
-
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import com.psc.exceptions.CustomException;
 import com.psc.users.domain.User;
-import com.psc.users.domain.UserInfo;
-
+import com.psc.users.jdbc.utils.UserMapper;
 
 public class UserDao extends ConnectionDao {
-
 	static final Logger logger = Logger.getLogger(UserDao.class); 
-	
-	UserInfo userInfo=new UserInfo();
-
-	@SuppressWarnings("unchecked")
-	public void  insertUser(User user) throws CustomException {
-	/*	String sql = "INSERT INTO users "  
-				+ "(username,password, email, mobile) VALUES (?, ?, ?,?)";  
-		
-		
-		jdbcTemplate.update(  
-				sql,  
-				new Object[] { user.getUsername(),user.getPassword(),user.getEmail(),user.getMobile() });
-		
-		String sql2 = "SELECT uid FROM users WHERE username = ?";
-		 
-		Integer id = getJdbcTemplate().queryForObject(
-				sql2, new Object[] { user.getUsername() }, 	Integer.class);
-		
-		System.out.println("USERID "+ id);
-		
-		userInfo.setId(id);*/
+	public User getUser(User user){		
+		 String sql2="Select * from users where username=:username or mobile=:mobile or email=:email";		;  
+		 SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("username", user.getUsername()).addValue("mobile", user.getMobile()).addValue("email", user.getEmail());
+		 try{	  
+		  @SuppressWarnings("unchecked")
+		User userd=(User) namedParameterJdbcTemplate.queryForObject(sql2, namedParameters, new UserMapper());  
+		  System.out.println("user dao "+userd);
+		  return userd; 
+	}catch(EmptyResultDataAccessException e){		
+		return null;
+	}		
+	}
+	public User  insertUser(User user) throws CustomException {
 		BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
 		String encryptedPassword = passwordEncryptor.encryptPassword(user.getPassword());
+		user.setPassword(encryptedPassword);
 		
 		String sql="INSERT INTO users (username, password, email,mobile) VALUES (:username, :password, :email,:mobile)";
-		 Map namedParameters = new HashMap();     
-	      namedParameters.put("username", user.getUsername());     
-	      namedParameters.put("password", encryptedPassword);  
-	      namedParameters.put("email", user.getEmail());  
-	      namedParameters.put("mobile", user.getMobile());  
+		SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(user);
 	 try{
-		namedParameterJdbcTemplate.update(sql, namedParameters);
+		namedParameterJdbcTemplate.update(sql, parameterSource);
 	 }catch(DuplicateKeyException d){
 		 
-		throw new CustomException("user already exists");
-
-		 
-	 }
-		
-		
-		
-
-		
-
+		throw new CustomException("This is custom message");		 
+	 } 
+	 String sql2="Select * from users where username=:username";
+	  SqlParameterSource namedParameters = new MapSqlParameterSource("username", user.getUsername());	  
+	  @SuppressWarnings("unchecked")
+	User usero=(User) namedParameterJdbcTemplate.queryForObject(sql2, namedParameters, new UserMapper());  
+	  System.out.println("user dao "+usero);
+	  return usero;
 	}
-
-}
+	}

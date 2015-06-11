@@ -1,13 +1,10 @@
 package com.psc.users.domain;
-
-public class UserInfo {
-	
+public class UserInfo {	
 	private int id;
 	private String firstname;
     private String lastname;
     private int age;
-    private String gender;
-	
+    private String gender;	
     public int getId() {
 		return id;
 	}
@@ -29,6 +26,12 @@ public class UserInfo {
 	public int getAge() {
 		return age;
 	}
+	@Override
+	public String toString() {
+		return "UserInfo [id=" + id + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", age=" + age + ", gender="
+				+ gender + "]";
+	}
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -38,6 +41,4 @@ public class UserInfo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
-
-}
+	}

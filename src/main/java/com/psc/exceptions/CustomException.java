@@ -1,33 +1,30 @@
 package com.psc.exceptions;
 
-public class CustomException extends Exception
-{
+import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 
-    private static final long serialVersionUID = 1997753363232807009L;
+@ControllerAdvice
+public class CustomException extends RuntimeException {
+	static final Logger logger = Logger.getLogger(CustomException.class);
+	private static final long serialVersionUID = 1997753363232807009L;
 
-		public CustomException()
-		{
-		}
+	public CustomException() {
+	}
 
-		public CustomException(String message)
-		{
-			super(message);
-		}
+	public CustomException(String message) {
+		super(message);
+	}
 
-		public CustomException(Throwable cause)
-		{
-			super(cause);
-		}
+	public CustomException(Throwable cause) {
+		super(cause);
+	}
 
-		public CustomException(String message, Throwable cause)
-		{
-			super(message, cause);
-		}
+	public CustomException(String message, Throwable cause) {
+		super(message, cause);
+	}
 
-		public CustomException(String message, Throwable cause, 
-                                           boolean enableSuppression, boolean writableStackTrace)
-		{
-			super(message, cause, enableSuppression, writableStackTrace);
-		}
-
+	public CustomException(String message, Throwable cause,
+			boolean enableSuppression, boolean writableStackTrace) {
+		super();
+	}
 }

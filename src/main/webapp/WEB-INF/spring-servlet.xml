@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"  
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"  
  xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"  
+ xmlns:tx="http://www.springframework.org/schema/tx"
  xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  
   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+   http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx.xsd
   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd  
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">   
   
@@ -14,7 +16,7 @@
 
   <context:component-scan base-package="com.psc" />   
  <mvc:annotation-driven />  
-  
+  <tx:annotation-driven  transaction-manager="transactionManager"/>
 
  <!-- declare beans -->  
 
@@ -30,6 +32,21 @@
  <bean id="Userservice" class="com.psc.users.service.UserService" /> 
  <bean id="Usermgr" class="com.psc.users.mgr.UserMgr" /> 
 
+  <bean id="transactionManager"
+  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  <property name="dataSource" ref="dataSource"></property>
+</bean>
+<bean   
+      class="org.springframework.context.support.ResourceBundleMessageSource"  
+      id="messageSource">    
+        <property name="basename" value="/WEB-INF/messages" />  
+    </bean>    
+
+
+
+
+
+  
   
  <!-- declare datasource bean -->  
  <bean id="dataSource"  

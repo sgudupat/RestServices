@@ -1,8 +1,12 @@
 package com.psc.users.domain;
 
+import javax.validation.constraints.NotNull;
+
 public class User {
 	
+	
 	private int id;
+	@NotNull(message="Username cannot be empty")
 	private String username;
 	private String password;
 	private String email;
@@ -38,5 +42,10 @@ public class User {
 		this.mobile = mobile;
 	}
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password="
+				+ password + ", email=" + email + ", mobile=" + mobile + "]";
+	}
 
 }

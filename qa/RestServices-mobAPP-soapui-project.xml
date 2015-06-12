@@ -11,14 +11,16 @@
    "ausername":"sasik",
    "apassword":"mskyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Registration with all values" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar",
-   "password": "Wdgdg@#446",
-   "email": "sar1@gmail.com",
-   "mobile": "945454541",
-   "firstname": "sara1",
-   "lastname": "rasa1",
-   "age":"15",
-   "gender":"female" 
+   "username": "kumar",
+   "password": "Wdgdg@#4490",
+   "email": "arima@gmail.com",
+   "mobile": "9095454451",
+   "firstname": "saran",
+   "lastname": "rasax",
+   "age":"154",
+   "gender":"male", 
+   "ausername":"sasi",
+   "apassword":"mkyongsd1A@asad"
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Registration with all null values" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "",
    "password": "",
@@ -27,144 +29,170 @@
    "firstname": "",
    "lastname": "",
    "age":"",
-   "gender":""  
+   "gender":"",
+   "ausername":"sasi",
+   "apassword":"mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Username already exists" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar",
-   "password": "Wdgdg@#446",
-   "email": "sar1@gmail.com",
-   "mobile": "945454541",
+   "username": "kumar",
+   "password": "Wdgdgdeg@#446",
+   "email": "aruty@gmail.com",
+   "mobile": "9454545492",
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15",
-   "gender":"female" 
-   "ausername": "",
-   "apassword": "" 
+   "gender":"female", 
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad" 
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Username with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "password": "bvdhjcfRTR@#$1454",
+   "email": "fdf@dfghf.com",
+   "mobile": "9856321470",
+   "firstname": "ghju",
+   "lastname": "fd",
+   "age":"52",
+   "gender":"female",
+   "ausername":"sasi",
+   "apassword":"mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Username field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "hara",
    "password": "hjhWER@#128924",
    "email": "daad@erte.com",
    "mobile": "9876543228",
    "firstname": "uiuo",
    "lastname": "fhhf",
    "age":"25",
-   "gender":"male"  
+   "gender":"male",
+   "ausername":"sasi",
+   "apassword":"mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile which already exists" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "umar",
+   "password": "Wdgdgdeg@#446",
+   "email": "aruty@gmail.com",
+   "mobile": "9654873231",
+   "firstname": "sara1",
+   "lastname": "rasa1",
+   "age":"15",
+   "gender":"female", 
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad" 
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
+   "username": "umar",
+   "password": "Wdgdgdeg@#446",
+   "email": "aruty@gmail.com",
    "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "firstname": "sara1",
+   "lastname": "rasa1",
+   "age":"15",
+   "gender":"female", 
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad" 
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "umar",
+   "password": "Wdgdgdeg@#446",
+   "email": "aruty@gmail.com",
+   "firstname": "sara1",
+   "lastname": "rasa1",
+   "age":"15",
+   "gender":"female", 
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad" 
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Email which already exists" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "fab",
+   "password": "jkghkjTYU@#135",
+   "email": "yes_nowd1@hotmail.com",
+   "mobile": "9632541870",
+   "firstname": "fana",
+   "lastname": "tana",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Email with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
+   "username": "fab",
+   "password": "jkghkjTYU@#135",
    "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "mobile": "9632541870",
+   "firstname": "fana",
+   "lastname": "tana",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Email field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "fab",
+   "password": "jkghkjTYU@#135",
+   "mobile": "9632541870",
+   "firstname": "fana",
+   "lastname": "tana",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "fab",
+   "password": "jkghbibgdciibiwhfhhe87",
+   "email": "yes_notnow@hotmail.com",
+   "mobile": "9632541870",
+   "firstname": "fana",
+   "lastname": "tana",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password (valid and Encryption)" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "fab",
+   "password": "jkghkjTYU@#135",
+   "email": "yes_notnow@hotmail.com",
+   "mobile": "9632541870",
+   "firstname": "fana",
+   "lastname": "tana",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
+   "username": "fabalous",
    "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "email": "yes_itis@hotmail.com",
+   "mobile": "9632541873",
+   "firstname": "fata",
+   "lastname": "taba",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "fabalous",
+   "email": "yes_itis@hotmail.com",
+   "mobile": "9632541873",
+   "firstname": "fata",
+   "lastname": "taba",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password &lt; 8 characters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar1",
-   "password": "gdg@#44",
-   "email": "sar1@gmail.com",
-   "mobile": "945454541",
-   "firstname": "sara1",
-   "lastname": "rasa1",
-   "age":"15",
-   "gender":"female"  
+   "username": "fabalous",
+   "password": "QEgh@3",
+   "email": "yes_itis@hotmail.com",
+   "mobile": "9632541873",
+   "firstname": "fata",
+   "lastname": "taba",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password > 20 characters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar1",
+   "username": "fabalous",
    "password": "gdg@#44bhvbhbbvsdbbjbdjs45464646464",
-   "email": "sar1@gmail.com",
-   "mobile": "945454541",
-   "firstname": "sara1",
-   "lastname": "rasa1",
-   "age":"15",
-   "gender":"female"  
+   "email": "yes_itis@hotmail.com",
+   "mobile": "9632541873",
+   "firstname": "fata",
+   "lastname": "taba",
+   "age":"55",
+   "gender":"male",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password without lowercase" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar1",
    "password": "ASDSDER@#4",
@@ -173,7 +201,9 @@
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+   "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password without uppercase" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar1",
    "password": "rtgdg@#44",
@@ -182,25 +212,31 @@
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password without number" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar1",
-   "password": "ADgdg@#kl",
+   "password": "ADgdg@#ksd",
    "email": "sar1@gmail.com",
    "mobile": "945454541",
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Password without special characters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar1",
-   "password": "ADgdg15kl",
+   "password": "AKLKDgdg15kl",
    "email": "sar1@gmail.com",
    "mobile": "945454541",
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar",
    "password": "Wdgdg@#446",
@@ -209,60 +245,74 @@
    "firstname": "sara",
    "lastname": "rasa",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with alphacharacters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with specialcharacters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with alphanumericals" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Email with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar",
    "password": "Wdgdg@#446",
-   "email": "1445454vdsg@##4",
-   "mobile": "94454644564",
+   "email": "sar@gmail.com",
+   "mobile": "94478bbbdm",
    "firstname": "sara",
    "lastname": "rasa",
    "age":"15",
-   "gender":"female"  
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with specialcharacters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "username": "sar",
+   "password": "Wdgdg@#446",
+   "email": "sar@gmail.com",
+   "mobile": "94435@#$@#",
+   "firstname": "sara",
+   "lastname": "rasa",
+   "age":"15",
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- mobile with alphanumericals" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "username": "sar",
+   "password": "Wdgdg@#446",
+   "email": "sar@gmail.com",
+   "mobile": "944idfbbbd",
+   "firstname": "sara",
+   "lastname": "rasa",
+   "age":"15",
+   "gender":"female",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Email with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@3",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
+   "age":"15",
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Age with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar",
+   "username": "sarn",
    "password": "Wdgdg@#446",
-   "email": "sar@gmail.com",
-   "mobile": "94454644564",
-   "firstname": "sara",
-   "lastname": "rasa",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
    "age":"",
-   "gender":"female"  
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Age field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "sar",
+   "username": "sarn",
    "password": "Wdgdg@#446",
-   "email": "sar@gmail.com",
-   "mobile": "94454644564",
-   "firstname": "sara",
-   "lastname": "rasa",
-   "gender":"female"  
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Age with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sar1",
    "password": "ADgdg15@#kl",
@@ -271,7 +321,9 @@
    "firstname": "sara1",
    "lastname": "rasa1",
    "age":"15t@",
-   "gender":"female"  
+   "gender":"female",
+   "ausername":"sasi",
+   "apassword":"mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Age with alphacharacters" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "",
    "password": "",
@@ -300,69 +352,68 @@
    "age":"",
    "gender":""  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Firstname with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
    "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "lastname": "rasav",
+   "age":"52",
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Firstname field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "lastname": "rasav",
    "age":"",
-   "gender":""  
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Lastname with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
    "lastname": "",
    "age":"",
-   "gender":""  
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Lastname field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
    "age":"",
-   "gender":""  
+   "gender":"male",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Gender with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
+   "age":"25",
+   "gender":"",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Gender field is missing" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "user",
-   "password": "tytyQW@#97867",
-   "email": "deaf@dumb.com",
-   "mobile": "9654321781",
-   "firstname": "hjh",
-   "lastname": "dumb",
-   "age":"67",
-   "ausername" :"sasi",
-   "apassword": "mkyongsd1A@asad"
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Gender with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "",
-   "password": "",
-   "email": "",
-   "mobile": "",
-   "firstname": "",
-   "lastname": "",
-   "age":"",
-   "gender":""  
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
+   "age":"25",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authenticated user-password encryption" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "sargh",
    "password": "Wdgdg90@#446",
@@ -373,7 +424,7 @@
    "age":"15",
    "gender":"female", 
    "ausername": "sasi",
-   "apassword": "mkyongsd1A@asd" 
+   "apassword": "mkyongsd1A@asad" 
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authentication- Ausername with null value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "now_d1",
    "password": "QW@#pfh5632",
@@ -415,8 +466,8 @@
    "lastname": "mined1",
    "age":"48",
    "gender":"male",
-   "ausername":"sasi",  
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authentication-valid ausername &amp; invalid password" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "ausername":"sasi"  
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authentication-valid ausername &amp; invalid apassword" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
    "username": "now_d1",
    "password": "QW@#pfh5632",
    "email": "yes_nowd1@hotmail.com",
@@ -427,15 +478,26 @@
    "gender":"male",
    "ausername":"sasi",
    "apassword":"mskyongsd1A@asad"  
-}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authentication-invalid ausername &amp; valid password" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
-   "username": "now_d1",
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Authentication-invalid ausername &amp; valid apassword" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "username": "now_d2",
    "password": "QW@#pfh5632",
-   "email": "yes_nowd1@hotmail.com",
-   "mobile": "9654873231",
+   "email": "yes_nowd2@hotmail.com",
+   "mobile": "9654873731",
    "firstname": "med1",
    "lastname": "mined1",
    "age":"48",
    "gender":"male",
    "ausername":"sasikl",
    "apassword":"mkyongsd1A@asad"  
+}</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Reg- Gender with junk value" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request>{
+   "username": "sarn",
+   "password": "Wdgdg@#446",
+   "email": "sargdvhb2356@hotmail.com",
+   "mobile": "9444455555",
+   "firstname": "saran",
+   "lastname": "rasav",
+   "age":"25",
+   "gender":"dsgef12",
+    "ausername": "sasi",
+   "apassword": "mkyongsd1A@asad"  
 }</con:request><con:originalUri>http://localhost/Registration/users/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

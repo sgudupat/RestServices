@@ -2,6 +2,7 @@ package com.psc.users.client;
 
 import com.psc.authentication.service.AccountsService;
 import com.psc.common.MessageBundle;
+import com.psc.exceptions.AuthenticationException;
 import com.psc.exceptions.CustomException;
 import com.psc.exceptions.UserValidationException;
 import com.psc.users.domain.User;
@@ -9,6 +10,7 @@ import com.psc.users.domain.UserInfo;
 import com.psc.users.service.UserService;
 import com.psc.users.util.UserUtil;
 import com.psc.validator.Validator;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -35,8 +37,13 @@ public class RegistrationController {
     @ResponseBody
     UserResponse addUser(@RequestBody UserRequest userRequest) throws CustomException {
         try {
+        	
+        	System.out.println("user request controller "+userRequest.toString());
+        	
+        	Validator validator=new Validator();
+        	logger.info("Registrationj controller:"+ userRequest.toString());
             //Authentication validation
-            Validator.authenticateRequest(userRequest);
+            validator.authenticateRequest(userRequest);
             //User Request Validation
             Validator.validateUserRequest(userRequest);
             //Build objects for Adding User
@@ -48,6 +55,10 @@ public class RegistrationController {
             return new UserResponse(5, "user added");
         } catch (UserValidationException e) {
             String errorMsg = "exceptions.UserValidationException." + e.getMessage();
+            UserResponse userResponse = new UserResponse(messageBundle.getMessage(errorMsg + ".responseCode"), messageBundle.getMessage(errorMsg + ".responseDescription"));
+            return userResponse;
+        } catch (AuthenticationException e) {
+            String errorMsg = "exceptions.AuthentcationException." + e.getMessage();
             UserResponse userResponse = new UserResponse(messageBundle.getMessage(errorMsg + ".responseCode"), messageBundle.getMessage(errorMsg + ".responseDescription"));
             return userResponse;
         } catch (Exception e2) {

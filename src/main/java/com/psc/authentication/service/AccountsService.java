@@ -2,7 +2,7 @@ package com.psc.authentication.service;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.psc.authentication.domain.Accounts;
+import com.psc.authentication.domain.Account;
 import com.psc.authentication.mgr.AccountsMgr;
 
 public class AccountsService {
@@ -10,7 +10,7 @@ public class AccountsService {
 	AccountsMgr accountssmgr;
 	static final Logger logger = Logger.getLogger(AccountsService.class);
 
-	public Accounts authenticationAccounts(Accounts accounts) {
+	public Account authenticationAccounts(Account accounts) {
 		return accountssmgr.getAccounts(accounts);
 	}
 

@@ -6,6 +6,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+
 import com.psc.exceptions.CustomException;
 import com.psc.users.domain.User;
 import com.psc.users.jdbc.utils.UserMapper;
@@ -16,7 +17,7 @@ public class UserDao extends ConnectionDao {
 		 String sql2="Select * from users where username=:username or mobile=:mobile or email=:email";		;  
 		 SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("username", user.getUsername()).addValue("mobile", user.getMobile()).addValue("email", user.getEmail());
 		 try{	  
-		  @SuppressWarnings("unchecked")
+				System.out.println("namedParameterJdbcTemplate::" + namedParameterJdbcTemplate);
 		User userd=(User) namedParameterJdbcTemplate.queryForObject(sql2, namedParameters, new UserMapper());  
 		  System.out.println("user dao "+userd);
 		  return userd; 

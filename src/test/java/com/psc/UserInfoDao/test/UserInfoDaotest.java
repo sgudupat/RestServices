@@ -33,7 +33,7 @@ public class UserInfoDaotest extends TestCase{
    UserInfo userInfo=new UserInfo();
    userInfo.setId(3);
    userInfo.setFirstname("david");
-   userInfo.setLastname("son");
+   userInfo.setLastname("son123");
    userInfo.setAge(12);
    userInfo.setGender("male");
    System.out.println(userInfo);

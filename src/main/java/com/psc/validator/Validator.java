@@ -1,45 +1,60 @@
 package com.psc.validator;
 
-import com.psc.authentication.domain.Accounts;
-import com.psc.exceptions.AuthenticationException;
-import com.psc.exceptions.UserValidationException;
-import com.psc.users.client.UserRequest;
-import com.psc.users.client.UserResponse;
-import com.psc.users.domain.User;
-import com.psc.users.domain.UserInfo;
-import com.psc.users.util.UserUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.jasypt.util.password.BasicPasswordEncryptor;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.jasypt.util.password.BasicPasswordEncryptor;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.psc.authentication.domain.Account;
+import com.psc.authentication.service.AccountsService;
+import com.psc.exceptions.AuthenticationException;
+import com.psc.exceptions.UserValidationException;
+import com.psc.users.client.RegistrationController;
+import com.psc.users.client.UserRequest;
+
 public class Validator {
+	
+	 static final Logger logger = Logger.getLogger(Validator.class);
+	
+	  @Autowired
+	  AccountsService accountService;
+	
     private static Pattern pswNamePtrn = Pattern.compile("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})");
     private static Pattern emailNamePtrn = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-    private static Pattern expression = Pattern.compile("^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$");
+    private static Pattern mobileptrn = Pattern.compile("^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$");
 
+    
 
-    public static void authenticateRequest(UserRequest userRequest) throws AuthenticationException {
-        boolean apass = Validator.validateApassword(userRequest.getApassword());
-        System.out.println("apassword value" + apass);
-        if (apass == false) {
-            throw new AuthenticationException("");
+    public   Account authenticateRequest(UserRequest userRequest) throws AuthenticationException {
+       System.out.println("Inside Authentication Validation");
+   //	System.out.println("Pswword is blank"+userRequest.getApassword()+"mnm");
+        if (StringUtils.isBlank(userRequest.getApassword())) {
+        	//System.out.println("Pswword is blank");
+            throw new AuthenticationException("AuthenticatepasswordMissing");
         }
-        boolean auser = Validator.validateAusername(userRequest.getAusername());
-        System.out.println("auser value" + auser);
-        if (auser == false) {
-            throw new AuthenticationException("");
+        
+        if (StringUtils.isBlank(userRequest.getAusername())) {
+            throw new AuthenticationException("AuthenticateuserMissing");
         }
-        Accounts acnts = accountService.authenticationAccounts(acnt);
+        Account acnt = new Account();
+		acnt.setUsername(userRequest.getAusername());
+		acnt.setPassword(userRequest.getApassword());
+        Account acnts = accountService.authenticationAccounts(acnt);
         if (acnts == null) {
-            throw new AuthenticationException("");
+            throw new AuthenticationException("AunthenticateDenied");
         }
         System.out.println("authentication username" + acnts.getUsername());
         BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
-        if (acnts.getUsername().equals(userRequest.getAusername())
-                && passwordEncryptor.checkPassword(userRequest.getApassword(), acnts.getPassword())) {
+        boolean auth=acnts.getUsername().equals(userRequest.getAusername())&& passwordEncryptor.checkPassword(userRequest.getApassword(), acnts.getPassword());
+        if (auth==false) {
+        	
+        	throw new AuthenticationException("AunthenticateDenied");
+        	
         }
+		return acnts;
     }
 
     public static void validateUserRequest(UserRequest userRequest) throws UserValidationException {
@@ -57,113 +72,51 @@ public class Validator {
             }
         }
         //Validate Mobile
+        
+        if (StringUtils.isBlank(userRequest.getMobile())) {
+            throw new UserValidationException("mobileIsEmpty");
+        } else {
+            Matcher mtch = mobileptrn.matcher(userRequest.getMobile());
+            if (!(mtch.matches())) {
+                throw new UserValidationException("mobileNotValid");
+            }
+        }
 
-        boolean mob = Validator.validateMobile(userRequest.getMobile());
-        if (mob == false) {
-            return new UserResponse(3, "Mobile number missing or empty");
+      //Validate email
+        if (StringUtils.isBlank(userRequest.getEmail())) {
+            throw new UserValidationException("emailIsEmpty");
+        } else {
+            Matcher mtch = emailNamePtrn.matcher(userRequest.getEmail());
+            if (!(mtch.matches())) {
+                throw new UserValidationException("emailNotValid");
+            }
         }
-        boolean email = Validator.validateEmail(userRequest.getEmail());
-        if (email == false) {
-            return new UserResponse(3, "email is  missing or empty");
+        
+    //Validate Firstname    
+    
+        if (StringUtils.isBlank(userRequest.getFirstname())) {
+            throw new UserValidationException("firstnameIsEmpty");
         }
-        Validator.validateFirstName(userRequest.getFirstname());
-        boolean lname = Validator.validateLastName(userRequest
-                .getLastname());
-        if (lname == false) {
-            return new UserResponse(3, "lastname is  missing or empty");
+        
+      //Validate lastname  
+        if (StringUtils.isBlank(userRequest.getLastname())) {
+            throw new UserValidationException("lastnameIsEmpty");
         }
-        boolean gende = Validator.validateGender(userRequest.getGender());
-        if (gende == false) {
-            return new UserResponse(3, "gender is missing or empty");
+       //Validate gender 
+        if (StringUtils.isBlank(userRequest.getGender())) {
+            throw new UserValidationException("genderIsEmpty");
         }
-        boolean age = Validator.validateAge(userRequest.getAge());
-        if (age == true) {
+     
+      
 
-            return new UserResponse(3, "age cannot be null or missing");
-        }
-        boolean em = Validator.validateEmailvalid(userRequest.getEmail());
-        if (em == false) {
-            return new UserResponse(3, "Email is not valid");
-        }
-        boolean mobi = Validator.validateMobilevalid(userRequest
-                .getMobile());
-        if (mobi == false) {
-            return new UserResponse(3, "Mobile no is not valid");
-        }
-    }
+  
+   
 
-    public static boolean validateEmailvalid(String Email) {
-        Matcher mtch = emailNamePtrn.matcher(Email);
-        if (mtch.matches()) {
-            return true;
-        }
-        return false;
-    }
+   
 
-    public static boolean validateEmail(String email) {
-        if (StringUtils.isNotBlank(email)) {
-            return true;
-        }
-        return false;
-    }
+  
 
+  
 
-    public UserResponse validateFirstName(String fname) {
-        if (StringUtils.isBlank(fname)) {
-            return new UserResponse(3, "fname is   missing or empty");
-        }
-        return null;
-    }
-
-    public static boolean validateLastName(String lname) {
-        if (StringUtils.isNotBlank(lname)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateMobile(String Mobile) {
-        if (StringUtils.isNotBlank(Mobile)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateGender(String gender) {
-        if (StringUtils.isNotBlank(gender)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateMobilevalid(String Mobile) {
-
-        Matcher mtch = expression.matcher(Mobile);
-        if (mtch.matches()) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateAge(int age) {
-        System.out.println("validator age" + age);
-        if (age == 0) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateAusername(String Ausername) {
-        if (StringUtils.isNotBlank(Ausername)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean validateApassword(String Apassword) {
-        if (StringUtils.isNotBlank(Apassword)) {
-            return true;
-        }
-        return false;
     }
 }

@@ -9,6 +9,7 @@ public class UserInfoDao extends ConnectionDao {
 	public void  insertUserinfo(UserInfo userinfo) {		
 		String sql = "INSERT INTO user_info  (user_id,firstname, lastname, age,gender) VALUES (:id, :firstname, :lastname,:age,:gender)";		
 		SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(userinfo);		 
+		System.out.println("namedParameterJdbcTemplate::" + namedParameterJdbcTemplate);
 		namedParameterJdbcTemplate.update(sql, parameterSource);
 		}
 	}

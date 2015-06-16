@@ -42,6 +42,8 @@ public class MessageBundle {
         try {
             resourceBundle = getResourceBundle();
             message = resourceBundle.getString(messageKey);
+            System.out.println("resource bundle"+message);
+            log.info("resource bundle"+message);
         } catch (Exception e) {
             log.debug("Couldn't find key: " + messageKey + " in " + MESSAGE_FILE + ".properties file. Using default: " + message);
         }

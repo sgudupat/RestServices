@@ -2,7 +2,7 @@ package com.psc.authentication.domain;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 
-public class Accounts {
+public class Account {
 	@JsonProperty(value = "username")
 	private String username;
 	@JsonProperty(value = "password")

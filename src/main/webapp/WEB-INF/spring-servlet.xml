@@ -23,8 +23,8 @@
  <bean id="Userinfodao" class="com.psc.users.dao.UserInfoDao" />  
  <bean id="Userinfo" class="com.psc.users.domain.UserInfo" /> 
  <bean id="Userinfomgr" class="com.psc.users.mgr.UserInfoMgr" /> 
- <bean id="Auserdao" class="com.psc.authentication.dao.AccountsDao" />  
- <bean id="Auser" class="com.psc.authentication.domain.Accounts" /> 
+ <bean id="accountsDao" class="com.psc.authentication.dao.AccountsDao" />  
+ <bean id="Auser" class="com.psc.authentication.domain.Account" /> 
  <bean id="Ausermgr" class="com.psc.authentication.mgr.AccountsMgr" /> 
  <bean id="Auserservice" class="com.psc.authentication.service.AccountsService" />
  <bean id="User" class="com.psc.users.domain.User" /> 
@@ -37,16 +37,11 @@
   <property name="dataSource" ref="dataSource"></property>
 </bean>
 <bean   
-      class="org.springframework.context.support.ResourceBundleMessageSource"  
+      class="org.springframework.context.support.ReloadableResourceBundleMessageSource"  
       id="messageSource">    
-        <property name="basename" value="/WEB-INF/messages" />  
+        <property name="basename" value="message" />  
     </bean>    
 
-
-
-
-
-  
   
  <!-- declare datasource bean -->  
  <bean id="dataSource"  

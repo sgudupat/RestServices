@@ -14,7 +14,5 @@ public class AccountsService {
 		return accountssmgr.getAccounts(accounts);
 	}
 
-	public void accounts(String user_id, String username, String password,
-			String config) {
-	}
+	
 }

@@ -31,6 +31,7 @@
  <bean id="Userdao" class="com.psc.users.dao.UserDao" /> 
  <bean id="Userservice" class="com.psc.users.service.UserService" /> 
  <bean id="Usermgr" class="com.psc.users.mgr.UserMgr" /> 
+ <bean id="Validator" class="com.psc.validator.Validator" /> 
 
   <bean id="transactionManager"
   class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

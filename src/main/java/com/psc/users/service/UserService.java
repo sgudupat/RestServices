@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.psc.exceptions.AuthenticationException;
 import com.psc.exceptions.CustomException;
+import com.psc.exceptions.UserException;
 import com.psc.users.dao.UserDao;
 import com.psc.users.domain.User;
 import com.psc.users.domain.UserInfo;
@@ -24,17 +26,17 @@ public class UserService {
 
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = false, rollbackFor = RuntimeException.class)
 	public String registerUser(User user, UserInfo userInfo)
-			throws CustomException {
+			throws UserException {
 		User userda = userdao.getUser(user);
 		if (userda != null) {
 			if (userda.getUsername().equals(user.getUsername())) {
-				return "user already exists";
+				 throw new UserException("UserNameExists");
 			}
 			if (userda.getMobile().equals(user.getMobile())) {
-				return "mobile already exists";
+				 throw new UserException("MobileExists");
 			}
 			if (userda.getEmail().equals(user.getEmail())) {
-				return "email already exists";
+				throw new UserException("EmailExists");
 			}
 		}
 		User userCreated = usermgr.insertUser(user);
@@ -45,5 +47,16 @@ public class UserService {
 		System.out.println("user info object" + userInfo);
 		userInfoMgr.inserUserInfo(userInfo);
 		return null;
+	}
+	
+	public User loginUser(User user) throws CustomException {
+		
+		
+		User user1=	usermgr.loginUser(user);
+		System.out.println("user1 object" +user1);
+			
+			return user1;
+	
+	
 	}
 }

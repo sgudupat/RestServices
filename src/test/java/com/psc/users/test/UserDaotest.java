@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.psc.authentication.service.AccountsService;
 import com.psc.users.dao.UserDao;
 import com.psc.users.domain.User;
 import com.psc.users.service.UserService;
@@ -29,6 +30,7 @@ public class UserDaotest extends TestCase{
 	 @Autowired 
 	UserDao userDao;
 	
+	
 	 @Test
 	 public void testinsertUser(){
 		 
@@ -41,8 +43,19 @@ public class UserDaotest extends TestCase{
 		 user.setPassword("muraliM@123");
 		 System.out.println(user);
 		 
-		 userDao.insertUser(user);
+		 //userDao.insertUser(user);
 		 
 	 }
+	 
+	 
+	 
+	 @Test
+	  public void testloginUser(){
+	   User user=new User();
+	   user.setUsername("murali");
+	  // user.setPassword("denny");
+	   //System.out.println(user);
+	   userDao.loginUser(user);
+	  }
 
 }
